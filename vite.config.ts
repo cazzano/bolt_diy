@@ -19,6 +19,13 @@ export default defineConfig((config) => {
     build: {
       target: 'esnext',
     },
+    server: {
+      allowedHosts: [
+        'localhost',
+        '127.0.0.1',
+        'boltdiy-production-4634.up.railway.app'
+      ],
+    },
     plugins: [
       nodePolyfills({
         include: ['buffer', 'process', 'util', 'stream'],
